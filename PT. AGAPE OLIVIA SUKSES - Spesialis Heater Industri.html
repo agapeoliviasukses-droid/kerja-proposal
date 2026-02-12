@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///F:/Perusahaan/Agape%20Olivia%20Sukses/Web%20Agape/DESAIN.HTML -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri</title>
+  
+  <!-- Menggunakan Font Google 'Inter' untuk tampilan yang lebih modern -->
+  <link href="./PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri_files/css2" rel="stylesheet">
+  
+  <style>
+    /* --- CSS VARIABLES & RESET --- */
+    :root {
+      --primary-color: #2563eb; /* Biru */
+      --primary-dark: #1e40af;
+      --secondary-color: #1f2937; /* Abu-abu Gelap/Hitam */
+      --accent-color: #f59e0b; /* Oranye Safety */
+      --bg-light: #f3f4f6;
+      --text-dark: #111827;
+      --text-gray: #4b5563;
+      --white: #ffffff;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    ul { list-style: none; padding: 0; margin: 0; }
+
+    /* --- HEADER & NAVIGATION --- */
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .logo p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    nav {
+      background-color: var(--secondary-color);
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: var(--white);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      background: linear-gradient(rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.8)), 
+                  url('https://picsum.photos/seed/factory/1200/600') no-repeat center center/cover;
+      color: var(--white);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--primary-color);
+      color: var(--white);
+      border-radius: var(--radius);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { background-color: var(--primary-dark); }
+
+    /* --- SECTIONS GENERAL --- */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    .section-title .line {
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent-color);
+      margin: 0 auto;
+    }
+
+    /* --- ABOUT SECTION (List Produk) --- */
+    .about-content {
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product-lists {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .list-column h3 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--bg-light);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .list-column ul li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      color: var(--text-gray);
+    }
+
+    /* --- SERVICES / CARDS --- */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+      border: 1px solid #eee;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #ddd;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h3 {
+      margin-top: 0;
+      color: var(--secondary-color);
+    }
+
+    .card-body p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+    }
+
+    /* --- CONTACT SECTION --- */
+    .contact-wrapper {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .contact-info, .contact-map {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .icon-box {
+      background: var(--bg-light);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 15px;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background-color: var(--secondary-color);
+      color: #9ca3af;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p { margin: 5px 0; }
+    footer strong { color: var(--white); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .product-lists { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 1.8rem; }
+      .header-container { flex-direction: column; gap: 10px; }
+      .nav-container { gap: 15px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Nav -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>PT. AGAPE OLIVIA SUKSES</h1>
+        <p>Spesialis Heater Element &amp; Sistem Pemanas Industri</p>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-container">
+        <a href="file:///F:/Perusahaan/Agape%20Olivia%20Sukses/Web%20Agape/DESAIN.HTML#about">Tentang Kami</a>
+        <a href="file:///F:/Perusahaan/Agape%20Olivia%20Sukses/Web%20Agape/DESAIN.HTML#services">Produk Unggulan</a>
+        <a href="file:///F:/Perusahaan/Agape%20Olivia%20Sukses/Web%20Agape/DESAIN.HTML#contact">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Solusi Pemanas Industri Terpercaya</h2>
+    <p>Kami menyediakan kualitas heater element terbaik untuk mendukung efisiensi produksi manufaktur Anda.</p>
+    <a href="file:///F:/Perusahaan/Agape%20Olivia%20Sukses/Web%20Agape/DESAIN.HTML#contact" class="btn">Hubungi Kami Sekarang</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-title">
+      <h2>Tentang Kami</h2>
+      <div class="line"></div>
+    </div>
+    
+    <div class="about-content">
+      <p>
+        Agape Olivia Sukses adalah perusahaan yang bergerak di bidang penyediaan
+        heater element (alat pemanas industri) untuk berbagai kebutuhan manufaktur seperti
+        plastik injection, kimia, makanan &amp; minuman, serta industri otomotif.
+      </p>
+    </div>
+
+    <div class="product-lists">
+      <!-- Kolom 1: Spare Parts -->
+      <div class="list-column">
+        <h3>Katalog Spare Part Heater</h3>
+        <ul>
+          <li>Immersion Heater</li>
+          <li>Silicon Nitride</li>
+          <li>Infrared Black Body</li>
+          <li>Bobin Heater</li>
+          <li>Cartridge Heater</li>
+          <li>Tubular Heater</li>
+          <li>Silica Quartz Heater</li>
+          <li>Thermocouple Control</li>
+          <li>Band Heater</li>
+          <li>Cooling Heatsink</li>
+          <li>Heatsink Heater</li>
+          <li>Ceramic Heater</li>
+          <li>Cast In Heater</li>
+          <li>Coil Heater</li>
+          <li>Flat/Strip Heater</li>
+        </ul>
+      </div>
+
+      <!-- Kolom 2: Mesin -->
+      <div class="list-column">
+        <h3>Katalog Mesin Industri</h3>
+        <ul>
+          <li>Oven Circulation</li>
+          <li>Oven Furnace</li>
+          <li>Electric Duct Heater</li>
+          <li>Load Bank</li>
+          <li>Incinerator</li>
+          <li>Hot Room Installation</li>
+          <li>Oven Conveyor</li>
+          <li>Hot Tank</li>
+          <li>Heat Exchangers</li>
+          <li>Heat Boiler</li>
+          <li>Dan lain-lain (Etc.)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Products Showcase -->
+  <section id="services" style="background-color: #f9fafb;">
+    <div class="section-title">
+      <h2>Produk Unggulan</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="grid-cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="./PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri_files/1064-400x300.jpg" alt="Band Heater">
+        <div class="card-body">
+          <h3>Band Heater</h3>
+          <p>Pemanas berbentuk cincin yang efisien digunakan pada mesin injection molding dan extruder plastik untuk memanaskan barel.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="./PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri_files/988-400x300.jpg" alt="Cartridge Heater">
+        <div class="card-body">
+          <h3>Cartridge Heater</h3>
+          <p>Elemen pemanas silinder berkapasitas tinggi, sangat cocok untuk pemanas cetakan (mold) dan plat industri.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="./PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri_files/117-400x300.jpg" alt="Tubular Heater">
+        <div class="card-body">
+          <h3>Tubular Heater</h3>
+          <p>Heater fleksibel berbentuk tabung yang umum digunakan untuk oven industri, pemanas air, dan sistem pemanas udara.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="./PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri_files/271-400x300.jpg" alt="Immersion Heater">
+        <div class="card-body">
+          <h3>Immersion Heater</h3>
+          <p>Solusi tepat untuk memanaskan cairan langsung di dalam tangki atau bak proses industri secara efisien.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>Hubungi Kami</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon-box">📧</div>
+          <div>
+            <strong>Email</strong>
+            <p>agape.os@yahoo.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">📞</div>
+          <div>
+            <strong>Telepon / WhatsApp</strong>
+            <p>+21 8258 2836</p>
+            <p>+62 811-1866-76</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box">📍</div>
+          <div>
+            <strong>Alamat Kantor</strong>
+            <p>Perum. Mayang Pratama Blok E10 No. 23<br>
+            Kel. Mustikasari, Kec. Mustika Jaya,<br>
+            Kota Bekasi</p>
+          </div>
+        </div>
+
+        <br>
+        <a class="btn" href="mailto:agape.os@yahoo.com" style="background-color: var(--secondary-color);">Kirim Email</a>
+      </div>
+      
+      <!-- Placeholder untuk Peta (Visual) -->
+      <div class="contact-map" style="background: #e5e7eb; border-radius: 8px; min-height: 250px; display: flex; align-items: center; justify-content: center; color: #6b7280;">
+        <p>[Area Peta Lokasi]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <strong>PT Agape Olivia Sukses</strong>. All rights reserved.</p>
+    <p style="font-size: 0.8rem; margin-top: 10px;">Spesialis Heater Element &amp; Sistem Pemanas Industri</p>
+  </footer>
+
+
+</body></html>
